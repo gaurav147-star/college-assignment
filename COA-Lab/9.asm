@@ -17,12 +17,12 @@ mov dl,'*'
 int 21h
 loop loop2
 
-mov ah,2
 mov dl,10
+mov ah,2
 int 21h
 
-mov ah,2
 mov dl,13
+mov ah,2
 int 21h
 
 inc bx

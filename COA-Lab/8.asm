@@ -1,7 +1,7 @@
 ;Write a assembly program to take input a string and print on the user screen  upto 100 character will be allowed
 org 100h
 .data
-msg db 60 dup(?)
+msg db 100 dup(?)
 
 
 .code
@@ -34,7 +34,6 @@ display:
 again: 
     cmp [di],'$'
     je last
-    cmp [di],32
     
     mov dl,[di]
     mov ah,2

@@ -8,7 +8,7 @@ org 100h
     mov cx,0
     mov ah,1
     int 21h   
-    
+          ;ja
   L1:  
    cmp al,0dh
    JE L2
@@ -26,7 +26,7 @@ org 100h
     mov ah,2
     int 21h
 
-    JCXZ EXIT
+
    
   Top:
    pop dx
@@ -35,9 +35,7 @@ org 100h
   
     
     
-   Exit:
     mov ah,4ch
     int 21h
     
-main endp
-end main
+ret
