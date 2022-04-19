@@ -1,4 +1,4 @@
-;program to print two string in two lines
+;Print a new using procedure method
 org 100h
 .model small
 

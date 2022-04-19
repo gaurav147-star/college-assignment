@@ -1,7 +1,7 @@
 ;macro banake letter print krna h
 
-print macro p1
-mov dx, offset var1
+print macro s1
+mov dx, offset s1
 mov ah,9
 int 21h      
 endm
@@ -17,8 +17,8 @@ main proc
 mov ax ,@data
 mov ds ,ax
 
-print str1
-print str2
+print var1
+print var2
 
 mov ah,4ch
 int 21h
