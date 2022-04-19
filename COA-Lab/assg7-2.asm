@@ -1,9 +1,15 @@
 ;Print the given pattern using nested loop 
-
+;*
+;**
+;***                               
+;****
+;*****
+;******
 org 100h
 
-.model small
-.stack 100h
+.model small  
+.code
+main proc
 mov bx,1
 mov cx,6
 
@@ -32,9 +38,9 @@ loop loop1
 
 mov ah,4ch
 int 21h
-
 main endp
 end main
+
 
 
 

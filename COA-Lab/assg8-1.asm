@@ -5,10 +5,11 @@ org 100h
 .model small
 .stack 100h
 .data
-msg1 db "Enter Numbers$"
-msg2 db "Numbers after swap$"
+msg1 db "Enter Numbers- $"
+msg2 db "Numbers after swap- $"
  
-.code      
+.code
+main proc      
  mov ax,@data 
  mov ds,ax
  lea dx, msg1
@@ -25,8 +26,16 @@ msg2 db "Numbers after swap$"
  int 21h
  mov dl,al
  
- push dx
-   
+ push dx  
+ 
+ mov dl,10
+ mov ah,2
+ int 21h
+
+ mov dl,13
+ mov ah,2
+ int 21h
+  
  lea dx, msg2
  mov ah,9
  int 21h

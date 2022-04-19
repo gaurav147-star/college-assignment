@@ -13,23 +13,17 @@ mov ds ,ax
 mov ah, 1
 int 21h
 
+mov cx,al
+
+l1:
+mov ah, 1
+int 21h
+mov var1,al
+loop l1
+
 
 
 mov dx, offset var1
-mov ah,9
-int 21h
-
-mov dx,13
-mov ah,2
-int 21h
-
-mov dx,10
-mov ah,2
-int 21h
-
-
-
-mov dx, offset var2
 mov ah,9
 int 21h
 
