@@ -4,11 +4,11 @@ org 100h
 .model small
 .stack 100h
 .data
-.code   
+.code
+main proc  
     mov cx,0
     mov ah,1
     int 21h   
-          ;ja
   L1:  
    cmp al,0dh
    JE L2
@@ -35,7 +35,9 @@ org 100h
   
     
     
-    mov ah,4ch
-    int 21h
+   mov ah,4ch
+   int 21h
     
-ret
+main endp
+end main
+
