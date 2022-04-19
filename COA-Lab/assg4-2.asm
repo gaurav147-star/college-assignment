@@ -8,24 +8,49 @@ org 100h
 main proc
 
 mov ax ,@data
-mov ds ,ax
+mov ds ,ax 
+
+mov si,offset var1
 
 mov ah, 1
+int 21h 
+sub al,30h
+mov cl,al
+mov bl,al
+
+mov dx,13
+mov ah,2
 int 21h
 
-mov cx,al
+mov dx,10
+mov ah,2
+int 21h
 
+
+mov si,0
 l1:
 mov ah, 1
 int 21h
-mov var1,al
+mov var1[si],al
+inc si
 loop l1
 
-
-
-mov dx, offset var1
-mov ah,9
+mov dx,13
+mov ah,2
 int 21h
+
+mov dx,10
+mov ah,2
+int 21h
+
+mov cx,bx
+mov si,0
+l2:
+mov dl, var1[si]
+mov ah,2
+int 21h
+inc si
+loop l2
 
 mov ah,4ch
 int 21h
